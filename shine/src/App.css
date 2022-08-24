@@ -1,0 +1,140 @@
+.App {
+  text-align: center;
+  font-family: PT Sans,sans-serif,
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+.head-class{
+  width: 100%;
+  margin: auto;
+  margin-top: 8px;
+ 
+}
+.card{
+  overflow: hidden;
+}
+.assesment{
+  gap: 40px;
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+}
+.assesment img{
+  width: 75px;
+  height: 65px;
+  border-radius: 50%;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+#main{
+  margin: 0;
+  padding: 0;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.slider{
+  width: 100%;
+  height: 350px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.slides{
+  width: 500%;
+  height: 350px;
+  display: flex;
+}
+
+.slides input{
+  display: none;
+}
+
+.slide{
+  width: 20%;
+  transition: 2s;
+}
+
+.slide img{
+  width: 100%;
+  height: 350px;
+}
+
+/*css for manual slide navigation*/
+
+.navigation-manual{
+  position: absolute;
+  width: 100%;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn{
+  border: 2px solid grey;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 2s;
+  background: grey;
+}
+
+.manual-btn:not(:last-child){
+  margin-right: 15px;
+}
+
+.manual-btn:hover{
+  background: white
+}
+
+#radio1:checked ~ .first{
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+  margin-left: -20%;
+}
+
+#radio3:checked ~ .first{
+  margin-left: -40%;
+}
+
+#radio4:checked ~ .first{
+  margin-left: -60%;
+}
+
+

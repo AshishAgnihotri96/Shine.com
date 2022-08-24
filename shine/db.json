@@ -1,0 +1,62 @@
+{
+  "applicant":[
+    { "id":1,
+      "heading":"Looking applicants for Team Lead/Consultant-Order to Cash Processing",
+      "company":"Accenture",
+      "location":"Bangalore",
+      "exp":"7 to 11 Yrs",
+      "tag":"Be an Early Applicant",
+      "type":"Regular"
+      
+
+    },
+    {
+      "id":2,
+      "heading":"Inviting Candidates for Analyst-Capability Development",
+      "company":"Accenture",
+      "location":"Noida",
+      "exp":"3 to 5 Yrs",
+      "tag":"Be an Early Applicant",
+      "type":"Regular"
+
+    },
+    {
+      "id":3,
+      "heading":"Lead Analyst",
+      "company":"Wipro Limited",
+      "location":"Chennai",
+      "exp":"2 to 3 Yrs",
+      "tag":"Be an Early Applicant",
+      "type":"Regular"
+
+    },
+    {
+      "id":4,
+      "heading":"Solutions Delivery Analyst",
+      "company":"Wipro Limited",
+      "location":"Chennai",
+      "exp":"2 to 5 Yrs",
+      "tag":"Be an Early Applicant",
+      "type":"Regular"
+
+    },
+    {
+      "id":5,
+      "heading":"SAP PI - Process Integration-Lead",
+      "company":"Wipro Limited",
+      "location":"Chennai",
+      "exp":"1 to 2 Yrs",
+      "tag":"Be an Early Applicant",
+      "type":"Regular"
+
+    }
+
+
+    
+  ]
+  
+
+ 
+}
+
+
