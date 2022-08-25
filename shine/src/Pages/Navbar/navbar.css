@@ -171,7 +171,7 @@ margin-top: 10px;
         display: none;
         width: 180px;
         height: 80px;
-        /* background-color:rgb(80, 69, 69); */
+        background-color:rgb(255, 255, 255);
         position: absolute;
         margin-top: 8px;
         border-radius: 3px;
@@ -195,7 +195,7 @@ margin-top: 10px;
     display: none;
     width: 190px;
     height: 140px;
-    /* background-color:rgb(80, 69, 69); */
+    background-color:rgb(255, 255, 255);
     position: absolute;
     margin-top: 8px;
     border-radius: 3px;
@@ -222,7 +222,7 @@ margin-top: 10px;
     display: none;
     width: 200px;
     height: 180px;
-    /* background-color:rgb(80, 69, 69); */
+    background-color:rgb(255, 255, 255);
     position: absolute;
     margin-top: 8px;
     border-radius: 3px;
