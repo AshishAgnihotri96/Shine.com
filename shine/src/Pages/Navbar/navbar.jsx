@@ -1,23 +1,13 @@
 import React from 'react'
 import './navbar.css'
-import { Button } from '@chakra-ui/react'
-import { useDisclosure } from '@chakra-ui/react'
-import { LoginProvider } from '../component/Login'
+
 import { useContext } from 'react'
 
-import { Login } from '../component/Login'
-import { useState } from 'react'
-import { Login1 } from '../component/Login1'
-export const Navbar = () => {
-  const [state, setstate] = useState(false)
 
-    const Loginvalue=useContext(LoginProvider)
-    // console.log(Loginvalue,"ddsds")
-    const handelclick=()=>{
-      // Loginvalue()
-      setstate(!state)
-    }
-    
+import { useState } from 'react'
+
+export const Navbar = () => {
+
     const jobenter=()=>{
     console.log("a")
    let a=document.getElementById("job").style.display="block"
