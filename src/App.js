@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import Assistance from './components/Assistance';
+import Assistance from './components/assistance/Assistance';
 
 function App() {
   return (
