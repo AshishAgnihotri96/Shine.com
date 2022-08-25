@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
     Modal,
     ModalOverlay,
@@ -18,13 +18,41 @@ import {
     Flex, 
      Box,Image
   } from '@chakra-ui/react';
-  import {Link as RouterLink} from "react-router-dom";
+  import {Link as RouterLink, useNavigate} from "react-router-dom";
+  import {useDispatch, useSelector} from "react-redux";
+  import { loginData } from '../Redux/action';
+  import { LOGIN_SUCCESS } from '../Redux/actionTypes';
 
    export const Login=()=> {
+    
+    // console.log(store);
     const { isOpen, onOpen, onClose } = useDisclosure()
     const initialRef = React.useRef(null)
     const finalRef = React.useRef(null)
-  
+    const store=useSelector(state=>state.AuthReducer);
+    const [email,setEmail]=useState("");
+    const [password,setPassword]=useState("");
+    const dispatch=useDispatch();
+    const navigate=useNavigate();
+   console.log(email,password)
+
+    console.log(store);
+   const handleData=()=>{
+    let payload;
+    if(email && password)
+    {
+       payload={
+        email,password
+       }
+    }
+    dispatch(loginData(payload)).then((res)=>{
+      if(res===LOGIN_SUCCESS)
+      {
+          navigate("/",{replace:true})
+      }
+    })
+   }
+
     return (
       <>
         <Box onClick={onOpen}>Login</Box>
@@ -44,11 +72,11 @@ import {
                marginLeft={"3%"}>
                 <FormControl>
                 <FormLabel>Email</FormLabel>
-                <Input width={"80%"}/>
+                <Input width={"80%"} value={email} onChange={(e)=>setEmail(e.target.value)} />
                 </FormControl>
                 <FormControl>
                 <FormLabel marginTop={"2%"}>Password</FormLabel>
-                <Input width={"80%"} />
+                <Input type={"password"} width={"80%"} value={password} onChange={(e)=>setPassword(e.target.value)} />
                 </FormControl>
                <Box width={"100%"} display={"flex"}>
                   <Checkbox 
@@ -62,7 +90,8 @@ import {
                     </RouterLink>
                     </Text>
                     </Box>
-              <Button paddingLeft={"1%"} 
+              <Button onClick={handleData}
+              paddingLeft={"1%"} 
                backgroundColor={"purple.500"} 
                color="white" 
                width={"92%"}
