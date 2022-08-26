@@ -2,12 +2,31 @@ import React from 'react'
 import './navbar.css'
 
 import { useContext } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 import { useState } from 'react'
-import { Button } from '@chakra-ui/react'
+import { Button,Box,Text } from '@chakra-ui/react'
+import { Login } from '../Login'
+import { useDispatch, useSelector } from 'react-redux'
+import { loginOutData } from '../../Redux/AuthReducer/action'
+import { LOGOUT_SUCESS } from '../../Redux/AuthReducer/actionTypes'
 
 export const Navbar = () => {
+  const isAuth=useSelector(state=>state.AuthReducer.isAuth)
+  const namee=useSelector(state=>state.AuthReducer.token)
+  const dispatch=useDispatch();
+  // console.log(namee,"na")
+  console.log(isAuth,"isAuth")
+  const navigate=useNavigate();
+
+  const handleLogOut=()=>{
+      dispatch(loginOutData()).then((res)=>{
+        if(res===LOGOUT_SUCESS)
+        {
+             navigate("/",{replace:true})
+        }
+      })
+  }
 
     const jobenter=()=>{
     console.log("a")
@@ -73,7 +92,9 @@ export const Navbar = () => {
     </div>
     <div className='navbarhead-icon-help'>
       <div className='navbarhead-icon-help-icon'>
+     
         <img style={{width:"80%"}}  src="https://cdn-icons-png.flaticon.com/128/1034/1034131.png" alt="" />
+        {/* <Text>{isAuth && namee?namee.user.name :""}</Text>  */}
       </div>
       <div className='navbarhead-icon-help-text'>
         <h2>Help</h2>
@@ -110,12 +131,23 @@ export const Navbar = () => {
               <h1 style={{fontWeight:"bold",fontSize:"23px"}}>HELLO User!</h1>
               <h3>New To Shine?</h3>
               <Link to="/register">
-              <Button style={{background:"rgb(53, 176, 225)",color:"white",marginTop:"8px",marginBottom:"5px"}}>Register</Button>
+              <Button 
+              style={{background:"rgb(53, 176, 225)",color:"white",marginTop:"8px",marginBottom:"5px"}}>
+                Register</Button>
               </Link>
               <hr />
-              <Link to="/login">
-              <button style={{color:"rgb(53, 176, 225)"}}>Login</button>
-              </Link>
+              {/* login logout */}
+              <Box>{isAuth && namee? <Button  onClick={handleLogOut}
+              backgroundColor={"rgb(53, 176, 225)"}
+              height="20px" border={"none"} color={"white"} >LOGOUT</Button> 
+              
+              :<Login/>}
+              
+              </Box>
+              
+                <Text marginTop={"0px"}>{isAuth && namee? <Text>{namee.user.name}</Text>:""}</Text>
+              
+             
              </div>
 
         </div>

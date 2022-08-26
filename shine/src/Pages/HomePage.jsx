@@ -10,7 +10,7 @@ const HomePage = () => {
     <div>
          <Test/>
         <Head/>
-        <Applicant/>
+        {/* <Applicant/> */}
         
     </div>
   )
