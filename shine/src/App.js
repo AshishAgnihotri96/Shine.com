@@ -1,5 +1,7 @@
 
 import './App.css';
+import Applicant from './Components/Applicant';
+import ApplicantCard from './Components/ApplicantCard';
 import { MainRouter } from './Components/MainRoutes/MainRouter';
 import { Footer } from './Pages/Footer/Footer';
 
@@ -13,6 +15,8 @@ function App() {
     <div className="App">
     
       <MainRouter/>
+      {/* <Applicant/> */}
+      {/* <ApplicantCard/> */}
 
     </div>
   );
