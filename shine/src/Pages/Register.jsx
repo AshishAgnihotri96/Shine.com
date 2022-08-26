@@ -1,44 +1,70 @@
 import React from 'react'
-import {Box,Text,Input,Image} from "@chakra-ui/react";
+import {Box,Text,Input,Image,Button, Alert} from "@chakra-ui/react";
 import { ArrowUpIcon } from '@chakra-ui/icons'
 import {useState} from "react";
-
+import { registerData } from '../Redux/AuthReducer/action';
+import { useDispatch } from 'react-redux';
+import { REGISTER_SUCCESS } from '../Redux/AuthReducer/actionTypes';
+import {useNavigate} from "react-router-dom"
 export const Register = () => {
-  const [selectedFile,setSelectedFile]=useState("");
-  console.log(selectedFile,"selectedfle")
+  const [resume,setResume]=useState("");
+  const [name,setName]=useState("");
+
+  const [mobile,setMobile]=useState("");
+  const [email,setEmail]=useState("");
+  const [address,setaddress]=useState("");
+  const [experince,setExperince]=useState("");
+  const [qual,setQual]=useState("");
+  const [skills,setSkills]=useState("");
+  const [password,setPassword]=useState("");
+  const dispatch=useDispatch();
+  const naviagte=useNavigate();
+  
+
+//   console.log(selectedFile,"selectedfle")
+console.log(resume,name,mobile,email,password,address,experince,qual,skills);
+
+const handleSubmit=()=>{
+    let payload
+    if(resume && name && mobile && email && address && experince && qual && skills)
+    {
+     payload={
+        resume:resume,
+        name:name,
+        mobileno:mobile,
+        email:email,
+        password:password,
+        address:address,
+        experince:experince,
+        highestQualification:qual,
+        skills:skills
+     }
+    }
+    dispatch(registerData(payload)).then((res)=>{
+      console.log(res,"res")
+      if(res===REGISTER_SUCCESS)
+      {
+          naviagte("/",{replace:true})
+      }
+      else
+      {
+        alert.message("enter right credentials")
+      }
+    })
+}
 
   return (
-    <Box width={"80%"} height={"600px"} border="1px solid green" marginLeft={"10%"} marginTop={"5%"}
+    <Box width={"80%"} height={"680px"} border="1px solid green" marginLeft={"10%"} marginTop={"5%"}
     boxShadow="rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" padding={"0px"} textAlign="left"> 
         <Text fontWeight={"600"} fontSize={"22px"} marginTop={"2%"}
          marginLeft={"22%"}>Register Now</Text>
-         {/* autofill option */}
-         <Box width={"30%"} borderRadius={"8px"} textAlign={"center"} display={"flex"}
-          height={"45px"} border={"1px solid #7922bc"} marginLeft={"14%"} marginTop={"2%"} cursor={"pointer"}
-          >
+         
 
-            <Text marginLeft={"2%"} 
-            marginTop={"4%"}>Autofill by Resume</Text>
-
-            <ArrowUpIcon 
-             marginTop={"4.5%"}
-             width={"10%"}
-             height={"20px"}
-             color={"purple.500"}
-             marginLeft={"24%"}
-             fontWeight={"700"}
-           ></ArrowUpIcon>
-           <Text  marginTop={"4%"} fontWeight={"700"}
-           color={"purple.500"}>Upload</Text>
-          </Box>
-          <Box width={"25%"} height={"30px"} border={"1px solid transparent"} marginLeft="15%">
-          <Text fontSize={"12px"}>File Supported: pdf, doc, docx, rtf, txt - Max. 5 MB</Text>
-          </Box>
-          {/* or div */}
+          
           <Box width={"30%"} borderRadius={"8px"} textAlign={"center"} display={"flex"}
           height={"45px"} border={"1px solid transparent"} marginLeft={"14%"} marginTop={"2%"} cursor={"pointer"}
           >
-            <Box marginTop={"5%"}
+            <Box marginTop={"3%"}
              width={"25%"} height={"1px"} border={"1px solid #eeeeee"}></Box>
              <Text fontWeight={"700"}
               fontSize={"13px"} marginTop={"2%"} marginLeft={"2%"} marginRight={"2%"}
@@ -52,14 +78,32 @@ export const Register = () => {
     display={"flex"}>
       {/* that input div */}
       <Box width={"75%"} heigh={"100%"} border={"1px solid none"} marginRight={"1%"}>
-        <Input type="text" placeholder='Name*' width={"45%"} color={"blue"}/>
-        <Input type="text" placeholder='Mobile*' width={"45%"} marginLeft={"3%"}/>
-        <Input type="text" placeholder='Email*' width={"45%"} marginTop={"1%"}/>
-        <Input type="text" placeholder='Location*' width={"45%"} marginLeft={"3%"} marginTop={"3%"}/>
+        <Input value={name}
+         type="text" placeholder='Name*' width={"45%"} color={"blue"} onChange={(e)=>setName(e.target.value)}/>
+        <Input value={mobile}
+        type="text" placeholder='Mobile*' width={"45%"} 
+        marginLeft={"3%"}onChange={(e)=>setMobile(e.target.value)}/>
+
+        <Input type="text" placeholder='Email*' width={"45%"} value={email}
+        marginTop={"1%"} onChange={(e)=>setEmail(e.target.value)}
+        />
+        <Input type="text" placeholder='Location*' width={"45%"} value={address}
+        marginLeft={"3%"} marginTop={"3%"} onChange={(e)=>setaddress(e.target.value)}
+        />
         <Text fontSize={"13px"}>*Password link will be sent to this email</Text>
-        <Input type="text" placeholder='Experince/Fresher*' width={"45%"} color={"blue"} marginTop={"2%"}/>
-        <Input type="text" placeholder='Highest Qualification*' width={"45%"} marginLeft={"3%"} marginTop={"2%"}/>
-        <Input type="text" placeholder='Skills*' width={"93%"}  marginTop={"3%"}/>
+        <Input type="text" placeholder='Experince/Fresher*' width={"45%"} color={"blue"} value={experince} 
+        onChange={(e)=>setExperince(e.target.value)}
+         marginTop={"2%"}
+        />
+        <Input type="text" placeholder='Highest Qualification*' width={"45%"} value={qual} 
+        onChange={(e)=>setQual(e.target.value)}
+        marginLeft={"3%"} marginTop={"2%"}/>
+        <Input type="text" placeholder='Skills*' width={"93%"} value={skills}
+         onChange={(e)=>setSkills(e.target.value)}
+         marginTop={"3%"}/>
+         <Input type="text" placeholder='Password*' width={"93%"} value={password}
+         onChange={(e)=>setPassword(e.target.value)}
+         marginTop={"3%"}/>
       </Box>
 
       {/* that or div */}
@@ -109,8 +153,8 @@ export const Register = () => {
       
       
     </Box>
-    <Box marginTop={"4%"} borderRadius={"12px"} display="flex"
-     width={"17%"} height={"50px"} marginLeft={"25%"} border={"1px solid #7922bc"}
+    <Box marginTop={"7%"} borderRadius={"12px"} display="flex"
+     width={"17%"} height={"40px"} marginLeft={"25%"} border={"1px solid #7922bc"}
   >
      <ArrowUpIcon 
              marginTop={"4.5%"}
@@ -123,12 +167,18 @@ export const Register = () => {
            <Text color={"purple.500"} fontWeight={"700"} marginTop={"3%"}> Upload</Text>
            <Box marginLeft={"0%"} marginTop={"3%"}
            width={"50%"} height={"100%"} border={"1px solid none"}>
-            <Input fontSize={"8px"} border="none" cursor={"pointer"}
-            type={"file"} placeholder="Upload" onChange={(e)=>setSelectedFile(e.target.value)}/>
+            <Input fontSize={"8px"} border="none" cursor={"pointer"} value={resume}
+            type={"file"} placeholder="Upload" onChange={(e)=>setResume(e.target.value)}/>
+            
            </Box>
+
+           
      
           
   </Box>
+  <Button  marginTop={"2%"} marginLeft={"25%"} width={"16%"}  backgroundColor={"purple.500"}
+  color={"white"}
+  onClick={handleSubmit}>Register</Button>
     </Box>
   )
 }

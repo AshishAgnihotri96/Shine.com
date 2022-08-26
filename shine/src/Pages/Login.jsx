@@ -22,6 +22,7 @@ import {
   import {useDispatch, useSelector} from "react-redux";
   import { loginData } from '../Redux/AuthReducer/action';
   import { LOGIN_SUCCESS } from '../Redux/AuthReducer/actionTypes';
+  // import {Link as RouterLink} from "react-router-dom"
 
    export const Login=()=> {
     
@@ -36,7 +37,7 @@ import {
     const navigate=useNavigate();
    console.log(email,password)
 
-    console.log(store);
+    // console.log(store);
    const handleData=()=>{
     let payload;
     if(email && password)
@@ -150,7 +151,8 @@ import {
               <Text marginTop={"2%"} fontSize={"20px"} fontWeight={"500"} marginLeft={"25%"}>Don't have Shine account ?</Text>
               {/* registerdiv */}
               <Box height="30px" width={"15%"} borderRadius={"10px"} textAlign={"center"} onClick={onclick} cursor={"pointer"}
-              marginTop={"2.5%"} marginLeft={"1%"} backgroundColor={"purple.500"} color={"white"}><Text >Register</Text></Box>
+              marginTop={"2.5%"} marginLeft={"1%"} backgroundColor={"purple.500"} color={"white"}>
+                <Text ><RouterLink to="/register">Register</RouterLink></Text></Box>
 
              </Box>
           </ModalContent>
