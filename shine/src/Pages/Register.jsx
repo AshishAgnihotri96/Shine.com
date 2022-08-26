@@ -1,5 +1,5 @@
 import React from 'react'
-import {Box,Text,Input,Image,Button, Alert} from "@chakra-ui/react";
+import {Box,Text,Input,Image,Button} from "@chakra-ui/react";
 import { ArrowUpIcon } from '@chakra-ui/icons'
 import {useState} from "react";
 import { registerData } from '../Redux/AuthReducer/action';
@@ -46,19 +46,37 @@ const handleSubmit=()=>{
       {
           naviagte("/",{replace:true})
       }
-      else
-      {
-        alert.message("enter right credentials")
-      }
     })
 }
 
   return (
-    <Box width={"80%"} height={"680px"} border="1px solid green" marginLeft={"10%"} marginTop={"5%"}
+    <Box width={"80%"} height={"680px"} border="1px solid transparent" marginLeft={"10%"} marginTop={"5%"}
     boxShadow="rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" padding={"0px"} textAlign="left"> 
         <Text fontWeight={"600"} fontSize={"22px"} marginTop={"2%"}
          marginLeft={"22%"}>Register Now</Text>
-         
+         {/* autofill option */} 
+         {/* <Box width={"30%"} borderRadius={"8px"} textAlign={"center"} display={"flex"}
+          height={"45px"} border={"1px solid #7922bc"} marginLeft={"14%"} marginTop={"2%"} cursor={"pointer"}
+          >
+
+           
+
+            <ArrowUpIcon 
+             marginTop={"4.5%"}
+             width={"10%"}
+             height={"20px"}
+             color={"purple.500"}
+             marginLeft={"24%"}
+             fontWeight={"700"}
+           ></ArrowUpIcon>
+           <Text  marginTop={"4%"} fontWeight={"700"}
+           color={"purple.500"}>Upload</Text>
+           {
+        
+          <Box width={"25%"} height={"30px"} border={"1px solid transparent"} marginLeft="15%">
+          <Text fontSize={"12px"}>File Supported: pdf, doc, docx, rtf, txt - Max. 5 MB</Text>
+          </Box> 
+          {/* or div */}
 
           
           <Box width={"30%"} borderRadius={"8px"} textAlign={"center"} display={"flex"}
@@ -91,17 +109,17 @@ const handleSubmit=()=>{
         marginLeft={"3%"} marginTop={"3%"} onChange={(e)=>setaddress(e.target.value)}
         />
         <Text fontSize={"13px"}>*Password link will be sent to this email</Text>
-        <Input type="text" placeholder='Experince/Fresher*' width={"45%"} color={"blue"} value={experince} 
+        <Input type="text" placeholder='Experince/Fresher in Years*' width={"45%"} color={"blue"} value={experince} 
         onChange={(e)=>setExperince(e.target.value)}
          marginTop={"2%"}
         />
         <Input type="text" placeholder='Highest Qualification*' width={"45%"} value={qual} 
         onChange={(e)=>setQual(e.target.value)}
         marginLeft={"3%"} marginTop={"2%"}/>
-        <Input type="text" placeholder='Skills*' width={"93%"} value={skills}
+        <Input type="text" placeholder='Skill*' width={"93%"} value={skills}
          onChange={(e)=>setSkills(e.target.value)}
          marginTop={"3%"}/>
-         <Input type="text" placeholder='Password*' width={"93%"} value={password}
+         <Input type="password" placeholder='Password*' width={"93%"} value={password}
          onChange={(e)=>setPassword(e.target.value)}
          marginTop={"3%"}/>
       </Box>
