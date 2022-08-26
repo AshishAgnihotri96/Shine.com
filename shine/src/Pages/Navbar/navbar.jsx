@@ -2,9 +2,10 @@ import React from 'react'
 import './navbar.css'
 
 import { useContext } from 'react'
-
+import { Link } from 'react-router-dom'
 
 import { useState } from 'react'
+import { Button } from '@chakra-ui/react'
 
 export const Navbar = () => {
 
@@ -19,25 +20,34 @@ export const Navbar = () => {
   }
 
   const jobseekingenter=()=>{
-    console.log("a")
+
    let a=document.getElementById("jobseeking").style.display="block"
   }
   const jobseekingleave=()=>{
-    console.log("b")
+ 
     let a=document.getElementById("jobseeking").style.display="none"
     
   }
 
   const coursesenter=()=>{
-    console.log("a")
+
    let a=document.getElementById("courses").style.display="block"
   }
   const coursesleave=()=>{
-    console.log("b")
+
     let a=document.getElementById("courses").style.display="none"
     
   }
 
+  const profileenter=()=>{
+ 
+   let a=document.getElementById("nav-icon-profile-dropdown").style.display="block"
+  }
+  const profileleave=()=>{
+ 
+    let a=document.getElementById("nav-icon-profile-dropdown").style.display="none"
+    
+  }
 
 
   return (
@@ -74,7 +84,10 @@ export const Navbar = () => {
     </div>
     <div className='navbarsearch'>
       <div className='nav-logo'>
+      <Link to="/">
         <img src="https://www.shine.com/next/static/images/shine-logo.png" alt="" />
+      </Link>
+      
       </div>
       <div className='nav-search'>
         <div className='nav-searchbar'>
@@ -91,8 +104,20 @@ export const Navbar = () => {
         <div className='nav-icon-cart'>
           <img style={{width:"82%"}} src="https://cdn-icons-png.flaticon.com/128/2252/2252291.png" alt="" />
         </div>
-        <div className='nav-icon-profile'>
+        <div className='nav-icon-profile' onMouseEnter={profileenter} onMouseLeave={profileleave}>
           <img style={{width:"70%"}} src="https://cdn-icons-png.flaticon.com/128/848/848043.png" alt="" />
+          <div id='nav-icon-profile-dropdown'>
+              <h1 style={{fontWeight:"bold",fontSize:"23px"}}>HELLO User!</h1>
+              <h3>New To Shine?</h3>
+              <Link to="/register">
+              <Button style={{background:"rgb(53, 176, 225)",color:"white",marginTop:"8px",marginBottom:"5px"}}>Register</Button>
+              </Link>
+              <hr />
+              <Link to="/login">
+              <button style={{color:"rgb(53, 176, 225)"}}>Login</button>
+              </Link>
+             </div>
+
         </div>
       </div>
   
