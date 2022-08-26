@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'
 
 import { useState } from 'react'
 import { Button } from '@chakra-ui/react'
+import { Login } from '../Login'
 
 export const Navbar = () => {
 
@@ -110,12 +111,13 @@ export const Navbar = () => {
               <h1 style={{fontWeight:"bold",fontSize:"23px"}}>HELLO User!</h1>
               <h3>New To Shine?</h3>
               <Link to="/register">
-              <Button style={{background:"rgb(53, 176, 225)",color:"white",marginTop:"8px",marginBottom:"5px"}}>Register</Button>
+              <Button 
+              style={{background:"rgb(53, 176, 225)",color:"white",marginTop:"8px",marginBottom:"5px"}}>
+                Register</Button>
               </Link>
               <hr />
-              <Link to="/login">
-              <button style={{color:"rgb(53, 176, 225)"}}>Login</button>
-              </Link>
+              
+             <Login/>
              </div>
 
         </div>

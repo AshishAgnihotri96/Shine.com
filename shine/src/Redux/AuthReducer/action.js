@@ -1,4 +1,4 @@
-import * as Types from "../actionTypes";
+import * as Types from "./actionTypes";
 import axios from "axios";
 
 // thunk functiion

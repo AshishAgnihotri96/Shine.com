@@ -4,7 +4,7 @@ import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import { Text,Box } from '@chakra-ui/react'
-import { getTasks } from '../Redux/action'
+import { getTasks } from '../Redux/AppReducer/action'
 import { useDispatch,useSelector } from "react-redux";
 import ApplicantCard from './ApplicantCard';
  
