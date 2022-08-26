@@ -1,24 +1,44 @@
-import { Box, Flex, Text } from '@chakra-ui/react'
+import { Box, Button, Flex, Text } from '@chakra-ui/react'
 import React from 'react'
+import { Link } from 'react-router-dom'
+
+
 
 const ApplicantCard = ({id,heading,company,location,exp,tag,type}) => {
+  const styles={
+    color:"#919ba2",
+    
+  }
   return (
-    <Box boxShadow= "rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;" key={id}>
-        <Flex>
+    <Link to={`/jobdetail/${id}`}>
+    <Box  cursor="pointer" className='main-div' lineHeight="1.75rem" h="215px"  p="1rem" w="355px"  key={id}>
+        <Flex style={styles} fontSize="13px" justifyContent="space-between">
             <Text>Hot</Text>
             <Text>1 day ago</Text>
         </Flex>
-        <Text>{heading}</Text>
-        <Text>{company}</Text>
-        <Flex>
-            <span><i class="fa-solid fa-location-dot"></i></span><Text>{location}</Text>
-            <span><i class="fa-solid fa-briefcase"></i></span><Text>{exp}</Text>
+        <Text noOfLines={2} fontSize="18px" fontWeight="bold" align="left">{heading}</Text>
+        <Text style={styles} align="left">{company}</Text>
+        <Flex style={styles} gap="2rem">
+          <Flex>
+          <span><i className="fa-solid fa-location-dot"></i></span><Text ml="4px" > {location}</Text>
+          </Flex>
+            <Flex>
+            <span><i className="fa-solid fa-briefcase"></i></span><Text ml="4px" > {exp}</Text>
+            </Flex>
+           
         </Flex>
-        <Flex>
+        <Flex style={styles} fontSize="13px" gap="2rem">
             <Text>{tag} </Text>
             <Text>{type}</Text>
         </Flex>
+        <Flex className='sub-div' >
+          <Link to="/login">
+        <Text fontWeight="bold" color="#9263ff" >Apply</Text>
+        </Link>
+        </Flex>
+        
     </Box>
+    </Link>
   )
 }
 
