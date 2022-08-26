@@ -12,7 +12,7 @@ const Slider = () => {
         // { url: "images/7.jpg" },
       ];
   return (
-    <div style={{border:"1px solid red"}}>
+    <div style={{}}>
         <SimpleImageSlider 
         width={"100%"}
         height={"50vh"}
