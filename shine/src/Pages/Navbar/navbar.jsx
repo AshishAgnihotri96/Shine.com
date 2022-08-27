@@ -2,7 +2,7 @@ import React from 'react'
 import './navbar.css'
 
 import { useContext } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
 
 import { useState } from 'react'
 import { Button,Box,Text } from '@chakra-ui/react'
@@ -10,8 +10,21 @@ import { Login } from '../Login'
 import { useDispatch, useSelector } from 'react-redux'
 import { loginOutData } from '../../Redux/AuthReducer/action'
 import { LOGOUT_SUCESS } from '../../Redux/AuthReducer/actionTypes'
+import { Authcontext } from '../../Components/Authcontext'
 
 export const Navbar = () => {
+  const [state, setstate] = useState("")
+  const [searchjob, setSearchjob] = useState("");
+  const value=useContext(Authcontext)
+  console.log(value)
+  const handelclick=()=>{
+    setstate(searchjob)
+    value.authclick(state)
+  }
+
+
+
+
   const isAuth=useSelector(state=>state.AuthReducer.isAuth)
   const namee=useSelector(state=>state.AuthReducer.token)
   const dispatch=useDispatch();
@@ -108,14 +121,18 @@ export const Navbar = () => {
       <Link to="/">
         <img src="https://www.shine.com/next/static/images/shine-logo.png" alt="" />
       </Link>
-      
+      {/* input search */}
       </div>
       <div className='nav-search'>
         <div className='nav-searchbar'>
-        <input style={{width:"100%",height:"100%",outline:"none",font:"5px"}} type="text" placeholder='     job title, skills' />
+        <input style={{width:"100%",height:"100%",outline:"none",font:"5px"}} type="text" placeholder='     job title, skills'
+          onChange={(e) => setSearchjob(e.target.value)} />
         </div>
         <div className='nav-searchbutton'>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSsZcoKPB2KSMEMedlz0c1nBE-AvclKIh8YA&usqp=CAU" alt="" />
+          <NavLink to="/job">
+
+          <img onClick={handelclick} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSsZcoKPB2KSMEMedlz0c1nBE-AvclKIh8YA&usqp=CAU" alt="" />
+          </NavLink>
         </div>
       </div>
       <div className='nav-icon'>

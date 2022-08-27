@@ -21,6 +21,33 @@ switch(type)
     return {
       ...state,isEror:true,isLoading:true
     }
+
+
+
+    case types.GET_TODO_REQUEST:
+      return{
+          ...state, isLoading:true,isError:false
+      }
+
+      case types.GET_TODO_SUCCESS:
+          return{
+              ...state, isLoading:false,isError:false,
+              applicants:[...payload]
+          }
+
+          case types.GET_TODO_FAILURE:
+              return{
+                  ...state, isLoading:false,isError:true
+              }
+
+
+
+
+
+
+
+
+
     default:
       return state;
 }
