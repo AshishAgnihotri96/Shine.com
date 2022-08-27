@@ -5,7 +5,7 @@ import { getTasks } from '../Redux/action'
 import ApplicantCard from './ApplicantCard'
 import { Center, Text } from '@chakra-ui/react';
 
-const Applicants = ({heading,jobs}) => {
+const Applicants = ({heading,jobs,btn,elem}) => {
     const dispatch=useDispatch()
     const breakPoints=[
         
@@ -31,7 +31,7 @@ const Applicants = ({heading,jobs}) => {
           <Carousel breakPoints={breakPoints}>
             {applicant.length>0 && applicant.map((item)=>{
                 return(
-                    <ApplicantCard key={item.id} {...item}/>
+                    <ApplicantCard elem={elem} btn={btn} key={item.id} {...item}/>
                 )
             })}
             </Carousel>  

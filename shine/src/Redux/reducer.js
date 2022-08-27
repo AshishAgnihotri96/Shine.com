@@ -2,7 +2,8 @@ import * as types from "./actionTypes"
 const initialState={
   applicants:[],
   isEror:false,
-  isLoading:false
+  isLoading:false,
+  purchase:[]
 }
 
 const reducer=(state=initialState,action)=>{
@@ -21,6 +22,12 @@ switch(type)
     return {
       ...state,isEror:true,isLoading:true
     }
+   
+      case types.ADD_SUCCESS:
+        return {
+          ...state,isEror:false,isLoading:false,purchase:[...payload]
+        }
+       
     default:
       return state;
 }

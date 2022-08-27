@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 
 
-const ApplicantCard = ({id,heading,company,location,exp,tag,type}) => {
+const ApplicantCard = ({id,heading,company,location,exp,tag,type,btn,elem}) => {
   const styles={
     color:"#919ba2",
     
@@ -32,8 +32,8 @@ const ApplicantCard = ({id,heading,company,location,exp,tag,type}) => {
             <Text>{type}</Text>
         </Flex>
         <Flex className='sub-div' >
-          <Link to="/login">
-        <Text fontWeight="bold" color="#9263ff" >Apply</Text>
+        <Link to={`${elem}/${id}`}>
+        <Text fontWeight="bold" color="#9263ff" >{btn}</Text>
         </Link>
         </Flex>
         

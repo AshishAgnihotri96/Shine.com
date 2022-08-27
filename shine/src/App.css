@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   font-family: PT Sans,sans-serif;
-  
+  width: 100%;
 }
 
 .App-logo {
@@ -115,7 +115,7 @@ button.rec-dot{
 .slider{
   width: 100%;
   height: 350px;
-  border-radius: 10px;
+  
   overflow: hidden;
 }
 
@@ -144,14 +144,15 @@ button.rec-dot{
 .navigation-manual{
   position: absolute;
   width: 100%;
-  margin-top: -40px;
+  margin-top: -30px;
+  margin-left: 160px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .manual-btn{
   border: 2px solid grey;
-  padding: 5px;
+  padding: 3px;
   border-radius: 10px;
   cursor: pointer;
   transition: 2s;
@@ -181,5 +182,37 @@ button.rec-dot{
 #radio4:checked ~ .first{
   margin-left: -60%;
 }
+
+#o5:checked ~ .first{
+  margin-left: 0;
+}
+
+#o6:checked ~ .first{
+  margin-left: -20%;
+}
+
+#o7:checked ~ .first{
+  margin-left: -40%;
+}
+#o8:checked ~ .first{
+  margin-left: -60%;
+}
+#main-1{
+  margin: 0;
+  padding: 0;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.purchase-div{
+  border: 1px solid rgb(207, 190, 190);
+  width: 60%;
+  margin-left: 3rem;
+  height: auto;
+}
+
 
 

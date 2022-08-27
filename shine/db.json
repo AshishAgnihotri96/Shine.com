@@ -1,13 +1,13 @@
 {
-  "applicant":[
+  "applicants":[
     { "id":1,
       "heading":"Looking applicants for Team Lead/Consultant-Order to Cash Processing",
       "company":"Accenture",
       "location":"Bangalore",
       "exp":"7 to 11 Yrs",
       "tag":"Be an Early Applicant",
-      "type":"Regular"
-      
+      "type":"Regular",
+      "price":"₹ 12000"
 
     },
     {
@@ -17,8 +17,8 @@
       "location":"Noida",
       "exp":"3 to 5 Yrs",
       "tag":"Be an Early Applicant",
-      "type":"Regular"
-
+      "type":"Regular",
+      "price":"₹ 9000"
     },
     {
       "id":3,
@@ -27,7 +27,8 @@
       "location":"Chennai",
       "exp":"2 to 3 Yrs",
       "tag":"Be an Early Applicant",
-      "type":"Regular"
+      "type":"Regular",
+      "price":"₹ 10000"
 
     },
     {
@@ -37,7 +38,8 @@
       "location":"Chennai",
       "exp":"2 to 5 Yrs",
       "tag":"Be an Early Applicant",
-      "type":"Regular"
+      "type":"Regular",
+      "price":"₹ 12000"
 
     },
     {
@@ -47,13 +49,17 @@
       "location":"Chennai",
       "exp":"1 to 2 Yrs",
       "tag":"Be an Early Applicant",
-      "type":"Regular"
+      "type":"Regular",
+      "price":"₹ 14520"
 
     }
 
 
     
   ]
+
+
+  
   
 
  
