@@ -1,13 +1,11 @@
 
 import './App.css';
-import Applicant from './Components/Applicant';
-import ApplicantCard from './Components/ApplicantCard';
-import { Job } from './Components/Job/Job';
-import { MainRouter } from './Components/MainRoutes/MainRouter';
-import { Footer } from './Pages/Footer/Footer';
 
-import HomePage from './Pages/HomePage';
-import { Navbar } from './Pages/Navbar/navbar';
+
+import { MainRouter } from './Components/MainRoutes/MainRouter';
+
+
+
 
  
 

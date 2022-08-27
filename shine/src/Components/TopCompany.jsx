@@ -1,12 +1,14 @@
 
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useState } from 'react'
 import { ChevronLeftIcon ,ChevronRightIcon} from '@chakra-ui/icons'
 const TopCompany = () => {
     const[index,setindex]=useState(0)
  
     const handleAdd=()=>{
-        setindex(index+1)
+        
+            setindex(index+1)
+       
     }
     const handleSub=()=>{
         setindex(index-1)
@@ -30,3 +32,4 @@ const TopCompany = () => {
 }
 
 export default TopCompany
+// setindex(index+1)

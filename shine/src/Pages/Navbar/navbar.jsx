@@ -209,7 +209,7 @@ export const Navbar = () => {
             <h2 style={{color:"blue"}}>View All</h2>
           </div>
           </div>
-
+          <Link to="/courses">
           <div onMouseEnter={coursesenter} onMouseLeave={coursesleave}>COURSES
             <div id="courses">
               <h2>Sales and Marketing</h2>
@@ -219,6 +219,7 @@ export const Navbar = () => {
               <h2>View All</h2>
             </div>
           </div>
+          </Link>
           <div>CAREER GUIDANCE</div>
           <div>BLOG</div>
       </div>
