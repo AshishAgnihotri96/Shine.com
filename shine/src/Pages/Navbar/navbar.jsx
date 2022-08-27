@@ -80,7 +80,15 @@ export const Navbar = () => {
     let a=document.getElementById("nav-icon-profile-dropdown").style.display="none"
     
   }
-
+  const notifyenter=()=>{
+ 
+    let a=document.getElementById("nav-icon-notify").style.display="block"
+   }
+   const notifyleave=()=>{
+  
+     let a=document.getElementById("nav-icon-notify").style.display="none"
+     
+   }
 
   return (
     <div>
@@ -136,8 +144,17 @@ export const Navbar = () => {
         </div>
       </div>
       <div className='nav-icon'>
-      <div className='nav-icon-notification'>
-          <img style={{width:"68%"}} src="https://cdn-icons-png.flaticon.com/128/3602/3602145.png" alt="" />
+      <div className='nav-icon-notification' onMouseEnter={notifyenter} onMouseLeave={notifyleave}>
+          <img  style={{width:"68%"}} src="https://cdn-icons-png.flaticon.com/128/3602/3602145.png" alt="" />
+          <div id='nav-icon-notify'>
+            
+            <h2 style={{fontSize:"25px",fontWeight:"bold",marginTop:"10px",marginLeft:"15px"}}>Notification</h2>
+            <div className='notify'>
+              <img style={{width:"30%",margin:"auto"}} src="https://cdn-icons-png.flaticon.com/128/5441/5441280.png" alt="" />
+              <h2 style={{textAlign:"center",fontWeight:"500",fontSize:"14px"}}>No Notifications</h2>
+              <h2 style={{textAlign:"center"}}>We Will Notify You Once We Have Something For You</h2>
+            </div>
+          </div>
         </div>
         <div className='nav-icon-cart'>
           <img style={{width:"82%"}} src="https://cdn-icons-png.flaticon.com/128/2252/2252291.png" alt="" />
@@ -174,7 +191,9 @@ export const Navbar = () => {
     </div>
     <div className='navbar'>
       <div className='nav-button'>
-          <div>HOME</div>
+        <NavLink to="/">
+          <div >HOME</div>
+        </NavLink>
           <div onMouseEnter={jobenter} onMouseLeave={jobleave} >JOBS
              <div id='job'>
               <h2>Search</h2>

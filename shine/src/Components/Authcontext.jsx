@@ -29,7 +29,7 @@ const [state, setstate] = useState("")
     const getdata=()=>{
       dispatch(todorequest())
       
-     return axios.get("http://localhost:8080/posts")
+     return axios.get("http://localhost:8080/applicant")
       .then((res)=>{
        console.log(res.data,"data") 
        dispatch((todosucess(res.data)))

@@ -1,4 +1,7 @@
 {
+
+
+
   "applicant":[
     { "id":1,
       "heading":"Looking applicants for Team Lead/Consultant-Order to Cash Processing",
@@ -6,7 +9,9 @@
       "location":"Bangalore",
       "exp":"7 to 11 Yrs",
       "tag":"Be an Early Applicant",
-      "type":"Regular"
+      "type":"Regular",
+      "salary":"350000",
+      "position":"10"
       
 
     },
@@ -17,7 +22,9 @@
       "location":"Noida",
       "exp":"3 to 5 Yrs",
       "tag":"Be an Early Applicant",
-      "type":"Regular"
+      "type":"Regular",
+      "salary":"400000",
+      "position":"12"
 
     },
     {
@@ -27,27 +34,99 @@
       "location":"Chennai",
       "exp":"2 to 3 Yrs",
       "tag":"Be an Early Applicant",
-      "type":"Regular"
+      "type":"Regular",
+      "salary":"500000",
+      "position":"40"
 
     },
     {
       "id":4,
       "heading":"Solutions Delivery Analyst",
       "company":"Wipro Limited",
-      "location":"Chennai",
+      "location":"Delhi",
       "exp":"2 to 5 Yrs",
       "tag":"Be an Early Applicant",
-      "type":"Regular"
+      "type":"Regular",
+      "salary":"600000",
+      "position":"20"
 
     },
     {
       "id":5,
       "heading":"SAP PI - Process Integration-Lead",
       "company":"Wipro Limited",
-      "location":"Chennai",
+      "location":"Mumbai",
       "exp":"1 to 2 Yrs",
       "tag":"Be an Early Applicant",
-      "type":"Regular"
+      "type":"Regular",
+      "salary":"700000",
+      "position":"13"
+
+
+    },
+    {
+      "id":6,
+      "heading":"fresher android,php,web developer live trainee 3 to 6 month 8 hours per day",
+      "company":"Wipro Limited",
+      "location":"Gurgoan",
+      "exp":"9to10 Yrs",
+      "tag":"Be an Early Applicant",
+      "type":"Regular",
+      "salary":"1200000",
+      "position":"13"
+
+
+    },
+    {
+      "id":7,
+      "heading":"urgent hiring react js,node js ,react native,php fresher and experience 0 to 5",
+      "company":"Starwiz HR Solutions",
+      "location":"Patna",
+      "exp":"0to1 Yrs",
+      "tag":"Be an Early Applicant",
+      "type":"Regular",
+      "salary":"1200000",
+      "position":"13"
+
+
+    },
+    {
+      "id":8,
+      "heading":"urgent hiring react js,node js ,react native,php fresher and experience 0 to 5",
+      "company":"Starwiz HR Solutions",
+      "location":"Gwalior",
+      "exp":"0to1 Yrs",
+      "tag":"Be an Early Applicant",
+      "type":"Regular",
+      "salary":"1000000",
+      "position":"13"
+
+
+    },
+    {
+      "id":8,
+      "heading":"urgent hiring react js,node js ,react native,php fresher and experience 0 to 5",
+      "company":"Starwiz HR Solutions",
+      "location":"Bhopal",
+      "exp":"0to1 Yrs",
+      "tag":"Be an Early Applicant",
+      "type":"Regular",
+      "salary":"900000",
+      "position":"13"
+
+
+    },
+    {
+      "id":8,
+      "heading":"urgent hiring react js,node js ,react native,php fresher and experience 0 to 5",
+      "company":"Starwiz HR Solutions",
+      "location":"Jaipur",
+      "exp":"0to1 Yrs",
+      "tag":"Be an Early Applicant",
+      "type":"Regular",
+      "salary":"800000",
+      "position":"13"
+
 
     }
 

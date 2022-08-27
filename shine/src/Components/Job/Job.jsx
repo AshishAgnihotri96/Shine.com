@@ -1,15 +1,27 @@
 import React, { useContext } from 'react'
 import './job.css'
-
+import { Button } from '@chakra-ui/react'
+import { useState,useEffect } from 'react'
 import { Authcontext } from '../Authcontext'
 export const Job = ({item}) => {
     const value=useContext(Authcontext)
-  const state=(value.state)
+  
+    const state1=value.state
+    const [state,setstate]=useState("")
+  useEffect(() => {
+    // e.preventdefault()
+    {
+
+      setstate(state1)
+    }
+  },[state1])
+ 
+  console.log(state,"s")
   const applicants=(value.applicants)
   const isLoading=(value.isLoading)
 
 
-console.log(state,"jobitem",applicants,isLoading)
+// console.log(state,"jobitem",applicants,isLoading)
 
   return (
     
@@ -20,20 +32,27 @@ console.log(state,"jobitem",applicants,isLoading)
             <div className='job-bar2'>
                 <h2>Filter by</h2>
               <div className='job-bar2-div1'>
-                <select>
+                <select 
+                onChange={(e)=>{setstate(e.target.value)}}
+                >
                   <option value="">Location</option>
                   <option value="Noida">Noida</option>
                   <option value="Gurgoan">Gurgoan</option>
                   <option value="Delhi">Delhi</option>
-                  <option value="Banglore">Banglore</option>
+                  <option value="Bangalore">Bangalore</option>
                   <option value="Bhopal">Bhopal</option>
                   <option value="Patna">Patna</option>
                   <option value="Gwalior">Gwalior</option>
                   <option value="Jaipur">Jaipur</option>
+                  <option value="Bangalore">Bangalore</option>
+                  <option value="Chennai">Chennai</option>
+             
                 </select>
               </div>
               <div className='job-bar2-div2'>
-              <select>
+              <select
+                     onChange={(e)=>{setstate(e.target.value)}}
+              >
                   <option value="">Experience</option>
                   <option value="0">0</option>
                   <option value="1">1</option>
@@ -46,7 +65,9 @@ console.log(state,"jobitem",applicants,isLoading)
                 </select>
               </div>
               <div className='job-bar2-div3'>
-              <select>
+              <select
+                onChange={(e)=>{setstate(e.target.value)}}
+              >
                   <option value="">Salary</option>
                   <option value="350000">3.5Lpa</option>
                   <option value="400000">4 Lpa</option>
@@ -71,7 +92,7 @@ console.log(state,"jobitem",applicants,isLoading)
 ) : (
 applicants.filter((value) => {
 
-    if (state === "") {
+    if (state === "" ) {
 
     }
      else if (
@@ -92,6 +113,15 @@ else if (
   {
     return value;
 }
+
+else if (
+  value.salary.toLowerCase().includes(state.toLowerCase())
+  )
+  {
+    return value;
+}
+
+
       else if (
         value.location.toLowerCase().includes(state.toLowerCase())
         )
@@ -141,8 +171,12 @@ else if (
             <div style={{display:"flex"}}>
 
               <h1 style={{marginLeft:"15px",marginTop:"10px"}}>{item.type}</h1>
-              <h1 style={{marginLeft:"25px",marginTop:"10px"}}>{item.position}positons</h1>
+              <h1 style={{marginLeft:"25px",marginTop:"10px"}}>{item.position}positions</h1>
+              <h1  style={{marginLeft:"25px",marginTop:"10px"}}>{item.salary} /Yr</h1>
+              <Button style={{marginLeft:"225px",marginTop:"30px"}}>Apply Now</Button>
               </div>
+              
+              
             </div>
 
 
