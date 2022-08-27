@@ -135,7 +135,7 @@ box-shadow: 0px 0px 2px 0px   #888888;
 border-radius:0px 5px 5px 0px;
 margin-top: 10px;    
 }
-.nav-searchbutton>img{
+.nav-searchbutton>a>img{
     height:100%;
     width: 100%;
     border-radius:0px 5px 5px 0px;
@@ -158,11 +158,31 @@ margin-top: 10px;
 
     /* background-color: red; */
 }
+#nav-icon-notify{
+
+    display: none;
+    width: 380px;
+    height: 280px;
+    background-color:rgb(255, 255, 255);
+    position: absolute;
+    margin-top: 8px;
+    border-radius: 3px;
+    margin-left: -380px;
+    box-shadow: 0px 0px 2px 0px   #888888;
+
+}
 .nav-icon-cart{
     width:30px;
     height: 30px;
     cursor: pointer;
     /* background-color: red; */
+}
+.notify{
+    width:200px;
+    height:100px;
+
+    margin: auto;
+    margin-top: 50px;
 }
 .nav-icon-profile{
     width:30px;
@@ -292,6 +312,10 @@ margin-top: 10px;
     color:black;
     font-size: 14px;
     font-weight: 500;
+}
+.nav-button>a>div{
+    margin-top:15px;
+    cursor: pointer;   
 }
 .nav-button>div{
     margin-top:15px;

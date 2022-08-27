@@ -16,5 +16,24 @@ export const getTasks = () => (dispatch) => {
 };
 
 
+// job section part
+const todorequest=()=>{
+  return{
+      type:types.GET_TODO_REQUEST
+  }
+}
+const todosucess=(payload)=>{
+  return{
+      type:types.GET_TODO_SUCCESS,
+      payload,
+  }
+}
+const todoerror=()=>{
+      return{
+          type:types.GET_TODO_FAILURE
+      }
+}
+export {todoerror,todorequest,todosucess }
 
 
+// end here
