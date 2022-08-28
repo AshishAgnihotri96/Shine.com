@@ -201,6 +201,7 @@ export const Navbar = () => {
              </div>
 
           </div>
+          <Link to="/assistance">
           <div onMouseEnter={jobseekingenter} onMouseLeave={jobseekingleave}>JOBS SEEKING ASSISTANCE
           <div id='jobseeking'>
             <h2>Profile Booster</h2>
@@ -209,6 +210,7 @@ export const Navbar = () => {
             <h2 style={{color:"blue"}}>View All</h2>
           </div>
           </div>
+          </Link>
           <Link to="/courses">
           <div onMouseEnter={coursesenter} onMouseLeave={coursesleave}>COURSES
             <div id="courses">
