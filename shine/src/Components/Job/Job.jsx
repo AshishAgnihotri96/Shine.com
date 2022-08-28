@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import './job.css'
 import { Button } from '@chakra-ui/react'
 import { useState,useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { Authcontext } from '../Authcontext'
 export const Job = ({item}) => {
     const value=useContext(Authcontext)
@@ -173,7 +174,10 @@ else if (
               <h1 style={{marginLeft:"15px",marginTop:"10px"}}>{item.type}</h1>
               <h1 style={{marginLeft:"25px",marginTop:"10px"}}>{item.position}positions</h1>
               <h1  style={{marginLeft:"25px",marginTop:"10px"}}>{item.salary} /Yr</h1>
+              <Link to="/register">
               <Button style={{marginLeft:"225px",marginTop:"30px"}}>Apply Now</Button>
+              
+              </Link>
               </div>
               
               

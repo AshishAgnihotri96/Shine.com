@@ -4,6 +4,7 @@
   width: 100%;
 
 }
+
 .home-page{
 text-align: center;
 }
@@ -94,6 +95,7 @@ button.rec-dot{
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   
 }
 .border-sha{
