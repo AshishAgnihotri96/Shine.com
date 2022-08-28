@@ -1,9 +1,15 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
   font-family: PT Sans,sans-serif;
   width: 100%;
-}
 
+}
+.home-page{
+text-align: center;
+}
+#main-1 p{
+  text-align: center;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

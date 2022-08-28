@@ -28,7 +28,7 @@ const Applicants = ({heading,jobs,btn,elem}) => {
     <Center>
         
     <div  style={{width:"85%"}}>
-        <Text fontWeight="bold" fontSize="5xl">{heading}</Text>
+        <Text style={{textAlign:"center"}} fontWeight="bold" fontSize="5xl">{heading}</Text>
           <Carousel breakPoints={breakPoints}>
             {applicant.length>0 && applicant.map((item)=>{
                 return(

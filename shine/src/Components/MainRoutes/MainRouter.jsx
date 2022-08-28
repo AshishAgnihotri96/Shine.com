@@ -2,6 +2,7 @@ import React from 'react'
 import {Route,Routes} from 'react-router-dom'
 import Courses from '../../Pages/Courses'
 import { Footer } from '../../Pages/Footer/Footer'
+import { Footer1 } from '../../Pages/Footer/Footer1'
 import HomePage from '../../Pages/HomePage'
 import { Login } from '../../Pages/Login'
 import { Navbar } from '../../Pages/Navbar/navbar'
@@ -25,6 +26,7 @@ export const MainRouter = () => {
         </Routes>
         
         <Footer/>
+        <Footer1/>
     </div>
   )
 }

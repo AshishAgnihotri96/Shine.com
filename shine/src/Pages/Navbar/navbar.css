@@ -1,3 +1,5 @@
+
+
 .navbarhead{
     height: 45px;
     width: 100%;
@@ -9,7 +11,33 @@
     .navbarhead{
         display: none;
     }
+    .job-container-sidebar{
+display: none   ;
+    }
+    .footer-container{
+        display: none;
+    }
+    .Footer1{
+        display:flex;
+
+    }
+    .nav-button{
+        display: none;
+    }
+
 }
+
+@media only screen and (min-width:1080px ){
+    .Footer1{
+        display:none;
+        position: fixed;
+    }
+
+}
+
+
+
+
 
 .navbarhead-icon{
     height: 35px;
@@ -46,16 +74,16 @@
 }
 .navbarhead-icon-employers{
     height:80%;
-    width: 25%;
+    width: 35%;
     /* background-color:#50193e; */
-    margin-left: -26%;
+    margin-left: -20%;
     display: flex;
     margin-top: 8px;
     cursor: pointer;
 }
 .navbarhead-icon-employers-icon{
     height:100%;
-    width:20%;
+    width:17%;
     /* background-color:#195025; */
 }
 .navbarhead-icon-employers-text{
@@ -264,7 +292,7 @@ margin-top: 10px;
     height: 180px;
     background-color:rgb(255, 255, 255);
     position: absolute;
-    margin-top: 8px;
+    margin-top:3px;
     border-radius: 3px;
     box-shadow: 0px 0px 2px 0px   #888888;
     /* margin-left: 40%; */
@@ -324,3 +352,7 @@ margin-top: 10px;
 .nav-button>div:hover{
     border-bottom:2px solid blue    ;
 }
+.nav-button>a>div:hover{
+    border-bottom:2px solid blue    ;
+}
+

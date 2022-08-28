@@ -55,7 +55,7 @@ const Courses = () => {
 <img src="https://i.im.ge/2022/08/26/Owg8JJ.Screenshot-8.png" alt="Screenshot_8" border="0"/>
 <img src="https://i.im.ge/2022/08/26/Ow8noc.Screenshot-9.png" alt="Screenshot_9" border="0"></img>
 <img src="https://i.im.ge/2022/08/26/OwRrZ6.Screenshot-10.png" alt="Screenshot_10" border="0"></img>
-<Applicants elem="/purchase" btn="Buy" jobs="119 More Courses"  heading="Popular Courses"/>
+<Applicants   elem="/purchase" btn="Buy" jobs="119 More Courses"  heading="Popular Courses"/>
 </Box> 
   )
 }
