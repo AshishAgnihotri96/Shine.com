@@ -13,7 +13,7 @@ This is a team project, built by us in the Construct Week - Unit 5 at Masai Scho
 
 - **[Ayush kumar](https://github.com/ayush7271)**
 - **[ Ashish Agnihotri](https://github.com/AshishAgnihotri96)**
-- **[swatibersurda](https://github.com/swatibersurda)**
+- **[swati bersurda](https://github.com/swatibersurda)**
 - **[Saurabh Kumar Singh](https://github.com/100rbrajpuT)**
 
 
