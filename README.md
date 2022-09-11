@@ -19,7 +19,7 @@ This is a team project, built by us in the Construct Week - Unit 5 at Masai Scho
 
 ### Pages & Features 👇
 
-- `Home Page`: Nav Bar with drop downs, sliding banners & slider.
+- `Home Page`: Nav Bar with drop downs & carousel.
 - `Sign-In`: User authentication to check whether user email and password match with details existing in the database using backend.
 - `Search`: User can search for the job present in the website.
 - `job page`: Job page created dynamically with filter by location,expriance and salary.
