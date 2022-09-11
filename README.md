@@ -20,7 +20,7 @@ This is a team project, built by us in the Construct Week - Unit 5 at Masai Scho
 ### Pages & Features 👇
 
 - `Home Page`: Nav Bar with drop downs & carousel.
-- `Sign-In`: User authentication to check whether user email and password match with details existing in the database using backend.
+- `Login`: User authentication to check whether user email and password match with details existing in the database using backend.
 - `Search`: User can search for the job present in the website.
 - `job page`: Job page created dynamically with filter by location,expriance and salary.
 - `course page`:user can see career oriented detail here.
@@ -44,7 +44,8 @@ This is a team project, built by us in the Construct Week - Unit 5 at Masai Scho
 
 **Register**
 
-![register](https://user-images.githubusercontent.com/99814289/189511154-25d8f59c-d0b3-4495-b70c-7d5b1b3755af.png)
+![register1](https://user-images.githubusercontent.com/99814289/189511449-aa1c298d-fcfa-4251-9053-04f95b3b91ff.png)
+
 
 **Login**
 
@@ -73,11 +74,11 @@ This is a team project, built by us in the Construct Week - Unit 5 at Masai Scho
 
 - Landing page, carousel is designed & functioned by Asish Agnihotri.
 
-- The search navbar, footer is designed & functioned by Ayush kumar.
+- search navbar, footer is designed & functioned by Ayush kumar.
 
 - Job page and filter data is designed & functioned by Ayush kumar.
 
-- The sign up, signin is designed and functioned by swati bersurda.
+- Register, Login page is designed and functioned by swati bersurda.
 
 - course page designed & functioned by Saurabh Kumar Singh.
 
