@@ -23,8 +23,7 @@ This is a team project, built by us in the Construct Week - Unit 5 at Masai Scho
 - `Sign-In`: User authentication to check whether user email and password match with details existing in the database using backend.
 - `Search`: User can search for the job present in the website.
 - `job page`: Job page created dynamically with filter by location,expriance and salary.
-- `Payment Page`: Users can add their payment details, address and can create their account.
-- `Order Successful`: cart gets empty automatically in local storage, once the user lands on this page.
+- `course page`:user can see career oriented detail here.
 - `Additional Features`: Kept the branding, fonts, colors and favicon and titles consistent throughout the whole site to give a feel like the original site.
 
 ## Tech Stack
