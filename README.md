@@ -7,13 +7,13 @@ Shine.com connects jobseekers and recruiters by accurately matching candidate pr
 
 This is a team project, built by us in the Construct Week - Unit 5 at Masai School.
 
-- Here is the link of our website live on netlify: https://jazzy-faloodeh-c0e3de.netlify.app
+- Here is the link of our website live on netlify: https://app.netlify.com/sites/shinejobs/overview
 
 ## Our Team Members ❤️
 
 - **[Ayush kumar](https://github.com/ayush7271)**
 - **[ Ashish Agnihotri](https://github.com/AshishAgnihotri96)**
-- **[swati bersurda](https://github.com/swatibersurda)**
+- **[Swati Bersurda](https://github.com/swatibersurda)**
 - **[Saurabh Kumar Singh](https://github.com/100rbrajpuT)**
 
 
@@ -78,7 +78,8 @@ This is a team project, built by us in the Construct Week - Unit 5 at Masai Scho
 
 - Job page and filter data is designed & functioned by Ayush kumar.
 
-- Register, Login page is designed and functioned by swati bersurda.
+- Register, Login page is designed and functioned by Swati Bersurda.
+-Backend is done by Swati Bersurda
 
 - course page designed & functioned by Saurabh Kumar Singh.
 
