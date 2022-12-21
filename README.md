@@ -7,7 +7,7 @@ Shine.com connects jobseekers and recruiters by accurately matching candidate pr
 
 This is a team project, built by us in the Construct Week - Unit 5 at Masai School.
 
-- Here is the link of our website live on netlify: https://app.netlify.com/sites/shinejobs/overview
+- Here is the link of our website live on netlify: https://shinejobs.netlify.app/
 
 ## Our Team Members ❤️
 
